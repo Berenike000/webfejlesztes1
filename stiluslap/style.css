@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: "sajatbetu"; src: url("../font/Depot.ttf");
+}
+
+body {
+    background-image: url("../kepek/hatter.jpg");
+    background-color:  #0a045e;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+    font-family: "sajatbetu", cursive;
+    /*font-weight: bold;*/
+    font-size: 18px;
+}
+
+.focontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.focontainer>* {
+	height: fit-content;
+    margin: 1%;
+}
+
+/*TAGEK*/
+
+/*p{
+    -webkit-text-stroke-color: #1F4287;
+    -webkit-text-stroke-width: 0.5px;
+}*/
+
+h1, h2, h3{
+    text-shadow: 5px 5px 10px rgb(33, 230, 193, 0.9);
+}
+
+header {
+    padding: 10px;
+    margin: 0px;
+    background-color: rgb(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 1.5em; 
+    color:white ;
+    border: 3px solid white;
+}
+
+article {
+    flex: 1 1 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 3px 15px;
+    color: white;
+    text-align: justify;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+section{
+    padding: 3px;
+    text-indent: 40px;
+}
+
+aside {
+    flex: 1 1 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 0.84em;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+aside.temak {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+footer {
+    /*background-color: #278EA5;*/
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+/*MENÜ*/
+/*DROPDOWN MENU*/
+.menu{
+    position: relative;
+}
+
+.lenyiltmenu{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.lenyiltmenu a{
+    display: block;
+    padding: 8px;
+    margin-bottom: 12px;
+    color: white;
+    background-color: #21E6C1;
+    border-radius: 20px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu:hover .lenyiltmenu{
+    display: block;
+}
+
+.menu a.active {
+    background-color: #1F4287;
+}
+
+.menu a:hover, .menu a.active:hover {
+    background-color: #278EA5;
+}
+
+/*DROPDOWN MENÜ EDDIG*/
+
+
+
+/*OSZTALYOK*/
+
+img.tablazat {
+    height: 150px;
+    width: auto;
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    transition: 1s;
+}
+
+img.tablazat:hover{
+    transform: scale(1.2);
+}
+
+td{
+    /*border: 2px solid white;*/
+    text-align: center;
+}
+
+button{
+    
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-family: "sajatbetu";
+    background-color: #21E6C1;
+    color: black;
+    font-weight: bold;
+    float: right;
+    text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+@media all and (min-width: 600px) {
+
+    article {
+        flex-basis: 73%;
+    }
+    aside {
+        flex-basis: 100%;
+    }
+    aside.tapertek {
+        flex-basis: 100%;
+    }
+    article.gyumolcs, article.szilva2 {
+        flex-basis: 100%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    
+    article {
+        flex-basis: 48%;
+    }
+    article, article.szilva2 {
+        flex-basis: 48%;
+    }
+    article.szilva {
+        flex-basis: 73%;
+    }
+    aside {
+        flex-basis: 23%;
+    }
+    aside.tapertek {
+        flex-basis: 23%;
+    }
+    article.gyumolcs {
+        flex-basis: 73%;
+    }
+}
